@@ -1,0 +1,25 @@
+[mysqld]
+character-set-server=utf8
+collation-server=utf8_general_ci
+server-id={{ SERVER_ID }}
+auto-increment-offset={{ SERVER_ID }}
+auto-increment-increment=2
+innodb_flush_log_at_trx_commit=1
+sync_binlog=1
+log_slave_updates=1
+gtid_mode=on
+enforce_gtid_consistency=1
+binlog_gtid_simple_recovery=1
+slave-skip-errors=all
+log_bin=mysql-bin
+binlog_format=mixed
+#binlog-ignore-db=mysql,information_schema,sys,performance_schema
+master_info_repository="TABLE"
+relay_log_info_repository="TABLE"
+relay_log_recovery=1
+relay-log=relay-bin
+relay-log-index=slave-relay-bin.index
+max_binlog_size=100M
+expire_logs_days=14
+long_query_time=1
+slow_query_log=ON
