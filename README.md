@@ -54,7 +54,7 @@ ip link
 等待运行完成后，再到服务器2上运行：
 
 ```
-./bin/init_slave.sh <network_interface> <virtual_ip> <slave_ip>
+./bin/init_slave.sh <network_interface> <virtual_ip>
 ```
 
 参数意义同上。
@@ -62,7 +62,7 @@ ip link
 如：
 
 ```
-./bin/init_slave.sh eth0 192.168.0.100 192.168.0.102
+./bin/init_slave.sh eth0 192.168.0.100
 ```
 
 安装完成。

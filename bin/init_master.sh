@@ -10,4 +10,4 @@ if [ -z $3 -a -z $4 ]; then
 fi
 
 docker exec mysql_1 /opt/mysql/init_replica.sh $4 $3
-docker exec -uroot mysql_1 /opt/mysql/init_keepalived.sh $1 $2 $3 100 
+docker exec -uroot mysql_1 /opt/mysql/init_keepalived.sh $1 $2 100 

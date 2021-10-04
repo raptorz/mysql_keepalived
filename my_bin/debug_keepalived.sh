@@ -30,6 +30,6 @@ else
     sed -i "s|{{ KEEPALIVED_NOPREEMPT }}||g" $KEEPALIVED_CONF_FILE
 fi
 
-/usr/sbin/keepalived -f $KEEPALIVED_CONF_FILE -nldD &> /proc/1/fd/1 &
+/usr/sbin/keepalived -f $KEEPALIVED_CONF_FILE -nldD
 
 exit 0

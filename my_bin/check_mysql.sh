@@ -2,11 +2,11 @@
 
 MYSQL_ROOT_PASSWORD=MySQL_1234
 
-mysql=( mysql -uroot -p"${MYSQL_ROOT_PASSWORD}" )
+mysql=( mysql -h127.0.0.1 -uroot -p"${MYSQL_ROOT_PASSWORD}" )
 if
-    ! echo "select 1;" | "${mysql[@]}" >/dev/null 2>&1
+    ! echo "select 1;" | "${mysql[@]}" &> /dev/null
 then
-    echo "mysql is not running"
+    kill -15 $(cat /run/keepalived.pid)
     exit 1
 fi
 
