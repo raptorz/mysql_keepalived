@@ -3,7 +3,7 @@
 global_defs {
    router_id {{ KEEPALIVED_ROUTER_ID }}
    vrrp_skip_check_adv_addr
-   vrrp_strict
+#   vrrp_strict
    vrrp_garp_interval 0
    vrrp_gna_interval 0
 }
